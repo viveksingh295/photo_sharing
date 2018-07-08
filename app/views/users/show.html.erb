@@ -1,0 +1,32 @@
+<section>
+  <div class="row">
+    <div class="col-md-2 col-md-offset-3">
+      <%= image_tag("img_avatar.png", alt: "User image", class: 'profile-image') %>
+    </div>
+    <div class="col-md-4">
+      <div class="profile-details">
+        <h3><%= @user.email %></h3>
+        <div class="profile-counts">
+          <button class="btn btn-default"><%= @post_count %> Posts</button>
+          <button id="followers" class="btn btn-default"><%= @followers_count %> Followers</button>
+          <button class="btn btn-default"><%= @following_count %> Following</button>
+        </div>
+        <span id="follow_form">
+          <% if current_user != @user %>
+            <%= render (current_user.following?(@user) ? 'unfollow': 'follow'), user: @user %>
+          <% end %>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="user-post">
+  <div class="row">
+    <%= render collection: @posts, partial: 'post' %>
+  </div>
+</div>
+
+<div id="infinite-scrolling">
+  <%= will_paginate @posts%>
+</div>

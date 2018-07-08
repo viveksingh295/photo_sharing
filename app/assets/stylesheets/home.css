@@ -1,0 +1,18 @@
+#users-posts {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.post-image img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#add-post a{
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  padding: 10px;
+  border-radius: 50%;
+}

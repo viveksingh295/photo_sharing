@@ -1,0 +1,61 @@
+<header id="header">
+  <div class="header_top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 ">
+          <div class="contactinfo">
+            <ul class="nav nav-pills">
+              <li><a href="tel:+917631744369"><i class="fa fa-phone"></i> +91 7631744369</a></li>
+              <li><a href="mailto:viveksingh.kiit@gmail.com?Subject=Prototype%20app"><i class="fa fa-envelope"></i> viveksingh.kiit@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="social-icons pull-right">
+            <ul class="nav navbar-nav">
+              <li><a href="https://www.facebook.com/vivek295" target='_blank'><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://twitter.com/viveksingh295" target='_blank'><i class="fa fa-twitter"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/viveksingh295" target='_blank'><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="https://www.instagram.com/viveksingh295" target='_blank'><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://plus.google.com/113531531964636288233" target='_blank'><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="header-middle">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="logo pull-left">
+            <a href="<%= root_path %>"><%= image_tag("logo.png", alt: "Photo Sharing", class: 'logo-img') %>
+              <span class="title"><h3>Photo Sharing</h3></span>
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="shop-menu pull-right">
+            <ul class="nav navbar-nav">
+              <% if signed_in? %>
+                <li><a href="<%= users_path %>"><i class="fa fa-users"></i> All Users </a></li>
+                <li>
+                  <a href="<%= posts_path %>">
+                    <i class="fa fa-upload"></i>
+                    <span class="badge"> <%= posts_count %> </span>
+                    All Posts 
+                  </a>
+                </li>
+                <li><a href="<%= user_path(current_user) %>"><i class="fa fa-user"></i> Account</a></li>
+                <li><a data-method='delete' href = "<%= logout_path %>"><i class = "fa fa-lock"></i>Logout</a></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--/header-middle-->
+
+
+</header>

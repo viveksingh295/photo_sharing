@@ -1,0 +1,28 @@
+img.profile-image {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+img.profile-image-thumb {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.profile-details {
+  padding: 20px;
+}
+
+.profile-counts {
+  padding: 20px 0px;
+}
+
+.user-post {
+  padding: 20px 0px;
+}
+
+.user-post-image img{
+  max-width: 100%;
+  height: 100%;
+}
