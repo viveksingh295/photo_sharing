@@ -20,7 +20,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: photo_sharing
+  database: photo_sharing_test
 
 production:
   <<: *default
